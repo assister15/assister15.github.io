@@ -3,21 +3,53 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>참나무 고목 지도</title>
+<title>참나무 고목 지도 — 사슴벌레·장수풍뎅이 채집 지도</title>
+<meta name="description" content="산림청 공식 임상도(1~9영급) 데이터를 기반으로 전국의 참나무류 서식 구역을 시각화한, 사슴벌레·장수풍뎅이 채집을 위한 무료 웹 지도입니다.">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2778145837074898"
      crossorigin="anonymous"></script>
 <style>
   body {
-    margin:0; height:100vh; display:flex; align-items:center; justify-content:center;
-    background:#1a0630; font-family:'Malgun Gothic', sans-serif; color:#fff; text-align:center;
+    margin:0; padding:24px; min-height:100vh; box-sizing:border-box;
+    background:#1a0630; font-family:'Malgun Gothic', sans-serif; color:#eee;
+    display:flex; flex-direction:column; align-items:center;
   }
-  a {
-    color:#fff; background:#4b1575; padding:14px 24px; border-radius:10px;
-    text-decoration:none; font-size:18px; display:inline-block;
+  .wrap { max-width:640px; width:100%; }
+  h1 { color:#fff; font-size:24px; margin-bottom:6px; }
+  .sub { color:#cbb8e8; font-size:14px; margin-bottom:24px; }
+  p { line-height:1.7; font-size:15px; }
+  h2 { color:#d8bfff; font-size:17px; margin:26px 0 10px; }
+  ul { padding-left:20px; line-height:1.8; font-size:14px; }
+  a.cta {
+    display:inline-block; margin-top:28px; color:#fff; background:#4b1575;
+    padding:14px 24px; border-radius:10px; text-decoration:none; font-size:17px;
   }
 </style>
 </head>
 <body>
-  <a href="https://assister15.github.io/chamnamu-gomok/">참나무 고목 지도 바로가기 →</a>
+  <div class="wrap">
+    <h1>참나무 고목 지도</h1>
+    <div class="sub">사슴벌레 · 장수풍뎅이 채집을 위한 참나무 서식지 지도</div>
+
+    <p>
+      이 지도는 산림청이 공개한 공식 임상도(1~9영급) 데이터를 기반으로,
+      전국의 참나무류(상수리나무·굴참나무 등) 서식 구역을 위성지도 위에
+      시각화한 웹 도구입니다. 참나무 노령림이 어디에 분포하는지 한눈에
+      확인할 수 있어, 사슴벌레와 장수풍뎅이 채집 장소를 미리 계획하는 데
+      도움을 드리고자 만들었습니다.
+    </p>
+
+    <h2>주요 기능</h2>
+    <ul>
+      <li>영급(수령)·수종 계열별 색상 구분 표시 및 세부 필터</li>
+      <li>키워드 장소 검색과 카카오 로드뷰 확인 (숲 폴리곤 미니맵 포함)</li>
+      <li>관심 장소를 별·동그라미·자동차 아이콘으로 저장하고 폴더로 정리</li>
+      <li>실시간 GPS 위치 추적 및 이동 방향 표시</li>
+      <li>기상청 실측 데이터 기반 실시간 기온·하늘상태 표시</li>
+      <li>저장한 두 장소를 출발/도착으로 지정해 카카오맵 자동차 길찾기 연동</li>
+      <li>구글 계정 로그인 시 여러 기기 간 저장 장소 동기화</li>
+    </ul>
+
+    <a class="cta" href="https://assister15.github.io/chamnamu-gomok/">지도 바로가기 →</a>
+  </div>
 </body>
 </html>
