@@ -4,52 +4,99 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>참나무 고목 지도 — 사슴벌레·장수풍뎅이 채집 지도</title>
-<meta name="description" content="산림청 공식 임상도(1~9영급) 데이터를 기반으로 전국의 참나무류 서식 구역을 시각화한, 사슴벌레·장수풍뎅이 채집을 위한 무료 웹 지도입니다.">
+<meta name="description" content="산림청 임상도 자료를 바탕으로 전국의 참나무류 숲을 나이대와 굵기대별 색으로 보여주는, 사슴벌레·장수풍뎅이 채집 계획용 무료 웹 지도입니다.">
+<link rel="stylesheet" href="style.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2778145837074898"
      crossorigin="anonymous"></script>
-<style>
-  body {
-    margin:0; padding:24px; min-height:100vh; box-sizing:border-box;
-    background:#1a0630; font-family:'Malgun Gothic', sans-serif; color:#eee;
-    display:flex; flex-direction:column; align-items:center;
-  }
-  .wrap { max-width:640px; width:100%; }
-  h1 { color:#fff; font-size:24px; margin-bottom:6px; }
-  .sub { color:#cbb8e8; font-size:14px; margin-bottom:24px; }
-  p { line-height:1.7; font-size:15px; }
-  h2 { color:#d8bfff; font-size:17px; margin:26px 0 10px; }
-  ul { padding-left:20px; line-height:1.8; font-size:14px; }
-  a.cta {
-    display:inline-block; margin-top:28px; color:#fff; background:#4b1575;
-    padding:14px 24px; border-radius:10px; text-decoration:none; font-size:17px;
-  }
-</style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>참나무 고목 지도</h1>
-    <div class="sub">사슴벌레 · 장수풍뎅이 채집을 위한 참나무 서식지 지도</div>
+<div class="wrap">
 
-    <p>
-      이 지도는 산림청이 공개한 공식 임상도(1~9영급) 데이터를 기반으로,
-      전국의 참나무류(상수리나무·굴참나무 등) 서식 구역을 위성지도 위에
-      시각화한 웹 도구입니다. 참나무 노령림이 어디에 분포하는지 한눈에
-      확인할 수 있어, 사슴벌레와 장수풍뎅이 채집 장소를 미리 계획하는 데
-      도움을 드리고자 만들었습니다.
-    </p>
+  <header class="site">
+    <a class="brand" href="./">참나무 고목 지도</a>
+    <nav>
+      <a href="manual.html">사용 설명서</a>
+      <a href="guide.html">지도 읽는 법</a>
+      <a href="about.html">소개·문의</a>
+      <a href="privacy.html">개인정보처리방침</a>
+    </nav>
+  </header>
 
-    <h2>주요 기능</h2>
+  <h1>참나무 고목 지도</h1>
+  <div class="sub">사슴벌레 · 장수풍뎅이 채집을 위한 참나무 서식지 지도</div>
+  <p class="quick">이미 써 보신 적이 있다면 <a href="https://assister15.github.io/chamnamu-gomok/">바로 지도로 이동</a>하세요.</p>
+
+  <h2>이 지도는 무엇인가요</h2>
+  <p>
+    참나무 고목 지도는 산림청이 공개한 임상도 자료를 바탕으로, 전국의 참나무류 숲이 어디에 있는지를
+    위성지도 위에 색으로 보여주는 무료 웹 지도입니다. 사슴벌레와 장수풍뎅이를 채집하러 가기 전에,
+    어느 동네 뒷산에 오래된 참나무 숲이 있는지 미리 가늠해 볼 수 있도록 만들었습니다.
+  </p>
+  <p>
+    임상도는 항공사진 판독과 현지조사를 거쳐 숲의 종류, 나무의 나이, 굵기 같은 구성 상태를 지도로 정리한
+    자료입니다. 이 지도에서는 그 가운데 참나무류, 침엽수와 활엽수가 섞인 숲, 오리나무, 그리고 고로쇠나무·
+    밤나무·자작나무·박달나무 등을 포함한 기타 활엽수 구역을 표시하고, 나이대(영급)와 굵기대(경급)가 높을수록
+    색이 진해지도록 5단계로 나누어 보여줍니다.
+  </p>
+
+  <h2>왜 참나무 숲을 찾을까요</h2>
+  <p>
+    사슴벌레류는 참나무류의 수액에 모이고, 오래된 나무의 갈라진 껍질 틈이나 속이 썩은 부분 같은 곳을 몸을
+    숨기는 곳이나 산란 장소로 쓰는 것으로 알려져 있습니다. 그래서 채집 장소를 고를 때 가장 먼저 할 일은
+    참나무가 모여 있는 숲, 그중에서도 나무가 오래되고 굵은 숲을 찾는 것입니다. 이 지도는 그 첫 단계를 전국
+    단위로 한눈에 볼 수 있게 해 줍니다.
+  </p>
+
+  <h2>주요 기능</h2>
+  <ul>
+    <li><b>숲 구역 색상 표시</b> — 색칠된 구역을 누르면 수종, 영급, 경급(추정), 그 위치의 고도가 말풍선으로 나옵니다. 수종 계열과 색상 단계별로 보고 싶은 것만 골라 켜고 끌 수 있습니다.</li>
+    <li><b>장소 저장과 폴더 정리</b> — 지도를 길게 눌러 마음에 둔 장소를 별, 동그라미, 자동차(주차한 곳) 아이콘으로 저장하고, 폴더를 만들어 나눠 정리할 수 있습니다.</li>
+    <li><b>검색과 로드뷰</b> — 장소명이나 주소를 검색해 이동하고, 카카오 로드뷰로 현장 주변의 도로와 입구 모습을 미리 볼 수 있습니다. 로드뷰 한쪽의 작은 위성지도에는 주변 숲 구역도 함께 표시됩니다.</li>
+    <li><b>실시간 위치 추적과 지나간 길</b> — GPS로 내 위치와 이동 방향을 보여 주고, 원하면 지나간 길이 지도에 선으로 남도록 할 수 있습니다.</li>
+    <li><b>경로 손그림</b> — 손가락으로 화면에 직접 선을 그어 등산로나 접근 경로를 지도에 남길 수 있습니다.</li>
+    <li><b>날씨와 달 밝기</b> — 기상청 자료를 바탕으로 현재 기온과 하늘 상태, 그리고 그날의 달 밝기를 화면 한쪽에 보여 줍니다.</li>
+    <li><b>카카오맵 길찾기 연동</b> — 저장한 두 곳을 출발지와 도착지로 지정하면 카카오맵으로 넘어가 자동차 길찾기를 할 수 있습니다.</li>
+    <li><b>시·군 경계 표시</b> — 시·군 단위 행정구역 경계와 이름을 필요할 때만 켜서 볼 수 있습니다.</li>
+    <li><b>여러 기기에서 함께 쓰기</b> — 구글 계정으로 로그인하면 저장한 장소를 PC와 휴대폰에서 같이 쓸 수 있습니다.</li>
+  </ul>
+
+  <h2>이렇게 사용해 보세요</h2>
+  <ol>
+    <li>지도 왼쪽 위의 검색창에 가 보고 싶은 동네나 산, 저수지 이름을 입력해 이동합니다.</li>
+    <li>색칠된 구역을 눌러 수종과 영급, 경급을 확인합니다. 🌳 버튼을 길게 누르면 보고 싶은 수종과 색상 단계만 남길 수 있습니다.</li>
+    <li>로드뷰로 진입로와 주차할 만한 곳을 미리 살펴보고, 마음에 드는 곳은 길게 눌러 저장해 둡니다.</li>
+    <li>현장에서는 위치 추적을 켜서 내 위치를 확인하며 이동합니다.</li>
+  </ol>
+  <p>더 자세한 사용법은 <a href="manual.html">사용 설명서</a>에, 색상과 용어의 의미는 <a href="guide.html">지도 읽는 법</a>에 정리해 두었습니다.</p>
+
+  <h2>알아 두실 점</h2>
+  <div class="note">
     <ul>
-      <li>영급(수령)·수종 계열별 색상 구분 표시 및 세부 필터</li>
-      <li>키워드 장소 검색과 카카오 로드뷰 확인 (숲 폴리곤 미니맵 포함)</li>
-      <li>관심 장소를 별·동그라미·자동차 아이콘으로 저장하고 폴더로 정리</li>
-      <li>실시간 GPS 위치 추적 및 이동 방향 표시</li>
-      <li>기상청 실측 데이터 기반 실시간 기온·하늘상태 표시</li>
-      <li>저장한 두 장소를 출발/도착으로 지정해 카카오맵 자동차 길찾기 연동</li>
-      <li>구글 계정 로그인 시 여러 기기 간 저장 장소 동기화</li>
+      <li>임상도는 숲을 구역 단위로 나누어 분류한 자료입니다. '참나무류'로 표시된 구역은 참나무가 있을 가능성이 높다는 뜻이지, 그 안의 모든 나무가 참나무라는 뜻은 아닙니다.</li>
+      <li>경급은 구역 안의 여러 조각 정보를 모아 계산한 값이라 말풍선에 '(추정)'이라고 표시합니다.</li>
+      <li>자료가 만들어진 뒤에 벌채나 개발로 숲이 달라졌을 수 있습니다. 후보지는 반드시 현장에서 다시 확인하세요.</li>
+      <li>국립공원, 보호구역, 사유지처럼 출입이나 채집이 제한되는 곳이 있습니다. 현지 안내와 규정을 확인하고, 야간 산행은 안전에 각별히 유의하세요.</li>
     </ul>
-
-    <a class="cta" href="https://assister15.github.io/chamnamu-gomok/">지도 바로가기 →</a>
   </div>
+
+  <h2>만든 사람</h2>
+  <p>
+    고도뤼가 사슴벌레 채집을 다니면서 직접 쓰려고 만들었고, 쓰다가 필요해진 기능을 하나씩 더해 가고 있습니다.
+    문의나 의견은 <a href="about.html">소개·문의</a> 페이지에서 확인하실 수 있습니다.
+  </p>
+
+  <p><a class="cta" href="https://assister15.github.io/chamnamu-gomok/">지도 바로가기 →</a></p>
+
+  <footer class="site">
+    <div class="links">
+      <a href="manual.html">사용 설명서</a>
+      <a href="guide.html">지도 읽는 법</a>
+      <a href="about.html">소개·문의</a>
+      <a href="privacy.html">개인정보처리방침</a>
+    </div>
+    <div>숲 자료 출처: 산림청 산림공간정보서비스 임상도 · ⓒ 고도뤼의 참나무 고목 지도</div>
+  </footer>
+
+</div>
 </body>
 </html>
